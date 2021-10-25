@@ -15,7 +15,6 @@ jobs:
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
     env:
-      working-dir: ./Data%20Structures%20and%20Algorithms/Algorithms
       Solution_Name: .\Data%20Structures%20and%20Algorithms\Algorithms\Algorithms.sln
       Test_Project_Path: .\Data%20Structures%20and%20Algorithms\Algorithms\Algorithms.Tests\Algorithms.Tests.csproj      
 
@@ -34,4 +33,4 @@ jobs:
       uses: microsoft/setup-msbuild@v1.0.2
 
     - name: Build project 
-      run: dotnet build ./Data%20Structures%20and%20Algorithms/Algorithms/Algorigthms.sln
+      run: dotnet build {{ env.Solution_Name }}
