@@ -15,8 +15,8 @@ jobs:
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
     env:
-      Solution_Name: .\Data%20Structures%20and%20Algorithms\Algorithms\Algorithms.sln
-      Test_Project_Path: .\Data%20Structures%20and%20Algorithms\Algorithms\Algorithms.Tests\Algorithms.Tests.csproj      
+      Solution_Name: .\Data Structures and Algorithms\Algorithms\Algorithms.sln
+      Test_Project_Path: .\Data Structures and Algorithms\Algorithms\Algorithms.Tests\Algorithms.Tests.csproj      
 
     steps:
     - name: Checkout
