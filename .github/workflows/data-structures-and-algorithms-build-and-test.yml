@@ -3,14 +3,11 @@ name: Build and Test Algorithms
 on:
   pull_request:
     paths:
-      - '/Data%20Structures%20and%20Algorithms/Algorithms/**'
+      - '/DataStructuresandAlgorithms/Algorithms/**'
   workflow_dispatch:
-  
-  
 
 jobs:
-
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
