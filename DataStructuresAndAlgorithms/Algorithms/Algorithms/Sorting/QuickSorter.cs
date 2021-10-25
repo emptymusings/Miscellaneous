@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Algorithms.Sorting
+﻿namespace Algorithms.Sorting
 {
+    using System;
+
     public class QuickSorter
     {
         public static void  Sort<T>(T[] values) where T : IComparable
