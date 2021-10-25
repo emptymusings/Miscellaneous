@@ -30,7 +30,7 @@ jobs:
         dotnet-version: ${{ matrix.dotnet-version }}
     - name: Install dependencies
       working-directory: ${{ env.working_dir }}
-      run: dotnet restore
+      run: dotnet restore ${{ env.working_dir }}
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v1.0.2
 
