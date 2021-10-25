@@ -1,9 +1,9 @@
 name: Build and Test Algorithms
 
 on:
-  pull_request:
+  push:
     paths:
-      - '/Data%20Structures%20and%20Algorithms/Algorithms/**'
+      - '/DataStructuresAndAlgorithms/Algorithms/**'
   workflow_dispatch:
   
   
