@@ -1,4 +1,4 @@
-name: Data Structures and Algorigthms Build
+name: Build and Test Algorithms
 
 on:
   pull_request:

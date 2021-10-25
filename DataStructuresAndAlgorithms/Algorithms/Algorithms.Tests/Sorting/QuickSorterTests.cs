@@ -80,5 +80,11 @@ namespace Algorithms.Tests.Sorting
             }
 
         }
+
+        [TestMethod]
+        public void ExpectedFailure()
+        {
+            Assert.AreEqual(1, 2);
+        }
     }
 }
