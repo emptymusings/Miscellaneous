@@ -17,8 +17,7 @@ jobs:
         dotnet-version: ['3.0', '3.1.x', '5.0.x' ]
 
     env:
-      working_dir: './DataStructuresAndAlgorithms/Algorithms/'
-      solution: 'Algorithms.sln'
+      solution: './DataStructuresAndAlgorithms/Algorithms/Algorithms.sln'
 
     steps:
     - name: Checkout
@@ -28,12 +27,10 @@ jobs:
       uses: actions/setup-dotnet@v1.7.2
       with:
         dotnet-version: ${{ matrix.dotnet-version }}
-    - name: Install dependencies
-      working-directory: ${{ env.working_dir }}
-      run: dotnet restore ${{ env.working_dir }}
+    - name: Install dependencies      
+      run: dotnet restore ${{ env.solution }}
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v1.0.2
 
     - name: Build project 
-      working-directory: ${{ env.working_dir }}
-      run: dotnet build
+      run: dotnet build ${{ env.solution }}
