@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - '/DataStructuresAndAlgorithms/Algorithms/**'
+  pull_request:
+    paths:
+      - '/DataStructuresAndAlgorithms/Algorithms/**'
   workflow_dispatch:
 
 jobs:
