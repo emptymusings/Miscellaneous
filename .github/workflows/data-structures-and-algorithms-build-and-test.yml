@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - '/Data%20Structures%20and%20Algorithms/Algorithms/**'
+    branches: [ main ]
   workflow_dispatch:
   
   
