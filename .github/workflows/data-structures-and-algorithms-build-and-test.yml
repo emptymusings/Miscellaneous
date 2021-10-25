@@ -3,8 +3,7 @@ name: Build and Test Algorithms
 on:
   pull_request:
     paths:
-      - '/Data%20Structures%20and%20Algorithms/Algorithms/**'
-    branches: [ main ]
+      - '/DataStructuresAndAlgorithms/Algorithms/**'
   workflow_dispatch:
   
   
