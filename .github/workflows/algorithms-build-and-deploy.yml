@@ -2,6 +2,7 @@ name: Algorithms Build and Deploy
 
 on:
   push:
+    branches: [ main ]
     paths:
       - 'DataStructuresAndAlgorithms/Algorithms/**'
   workflow_dispatch:
