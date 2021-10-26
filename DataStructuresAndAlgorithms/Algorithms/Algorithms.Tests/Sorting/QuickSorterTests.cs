@@ -10,7 +10,7 @@ namespace Algorithms.Tests.Sorting
     [TestClass]
     public class QuickSorterTests
     {
-        Random _random; 
+        Random _random;
 
         [TestMethod]
         public void SetIntegers_Ascending_Succeeds()
