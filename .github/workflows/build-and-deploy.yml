@@ -1,0 +1,38 @@
+name: Build and Test Algorithms
+
+on:
+  push:
+    paths:
+      - 'DataStructuresAndAlgorithms/Algorithms/**'
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: [ '5.0.x' ]
+
+    env:
+      solution: './DataStructuresAndAlgorithms/Algorithms/Algorithms.sln'
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2      
+
+    - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+      uses: actions/setup-dotnet@v1.7.2
+      with:
+        dotnet-version: ${{ matrix.dotnet-version }}
+
+    - name: Restore dependencies      
+      run: dotnet restore ${{ env.solution }}
+
+    - name: Build project 
+      run: dotnet build ${{ env.solution }} --no-restore 
+
+    - name: Run Unit Tests
+      run: dotnet test ${{ env.solution }}
+
+    - name: Dummy deploy procedure
+      run: echo 'There is no deployment step yet'
