@@ -4,4 +4,9 @@
     <TargetFrameworks>net5.0</TargetFrameworks>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Exercises\leetcode\Medium\" />
+    <Folder Include="Exercises\leetcode\Hard\" />
+  </ItemGroup>
+
 </Project>

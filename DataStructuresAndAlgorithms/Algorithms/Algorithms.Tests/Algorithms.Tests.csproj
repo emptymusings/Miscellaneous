@@ -17,4 +17,9 @@
     <ProjectReference Include="..\Algorithms\Algorithms.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Exercises\leetcode\Medium\" />
+    <Folder Include="Exercises\leetcode\Hard\" />
+  </ItemGroup>
+
 </Project>
