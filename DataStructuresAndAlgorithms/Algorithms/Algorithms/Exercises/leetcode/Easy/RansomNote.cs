@@ -14,8 +14,8 @@ namespace Algorithms.Exercises.leetcode.Easy
                 return magazine.IndexOf(ransomNote) >= 0;
             }
 
-            var ransomeLookup = test(ransomNote);
-            var magazineLookup = test(magazine);
+            var ransomeLookup = GetDictionary(ransomNote);
+            var magazineLookup = GetDictionary(magazine);
 
             foreach (KeyValuePair<char, int> item in ransomeLookup)
             {
@@ -26,7 +26,7 @@ namespace Algorithms.Exercises.leetcode.Easy
             return true;
         }
 
-        private static Dictionary<char, int> test(string source)
+        private static Dictionary<char, int> GetDictionary(string source)
         {
             Dictionary<char, int> result = new Dictionary<char, int>();
             int length = (int)source.Length / 2;
