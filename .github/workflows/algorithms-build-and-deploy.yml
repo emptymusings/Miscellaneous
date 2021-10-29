@@ -17,6 +17,8 @@ jobs:
 
     env:
       solution: './DataStructuresAndAlgorithms/Algorithms/Algorithms.sln'
+      package: './DataStructuresAndAlgorithms/Algorithms/Algorithms.csproj'
+      output: './Packages/Staging/DataStructuresAndAlgorithms'
 
     steps:
     - name: Checkout
@@ -37,4 +39,4 @@ jobs:
       run: dotnet test ${{ env.solution }}
 
     - name: Dummy deploy procedure
-      run: echo 'There is no deployment step yet'
+      run: dotnet build ${{ env.package }} --output './Packages/Staging/DataStructuresAndAlgorithms'
