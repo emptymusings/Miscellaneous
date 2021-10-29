@@ -38,5 +38,5 @@ jobs:
     - name: Run Unit Tests
       run: dotnet test ${{ env.solution }}
 
-    - name: Dummy deploy procedure
-      run: dotnet build ${{ env.package }} --output './Packages/Staging/DataStructuresAndAlgorithms'
+    - name: Deploy to staging
+      run: dotnet build ${{ env.solution }} --output './Packages/Staging/DataStructuresAndAlgorithms'
