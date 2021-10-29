@@ -18,7 +18,7 @@ jobs:
     env:
       solution: './DataStructuresAndAlgorithms/Algorithms/Algorithms.sln'
       package: './DataStructuresAndAlgorithms/Algorithms/Algorithms/Algorithms.csproj'
-      output: 'Packages/Staging/DataStructuresAndAlgorithms'
+      output: 'bin'
 
     steps:
     - name: Checkout
