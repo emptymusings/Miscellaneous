@@ -33,10 +33,10 @@ jobs:
       run: dotnet restore ${{ env.solution }}
 
     - name: Build project 
-      run: dotnet build ${{ env.solution }} --no-restore 
+      run: dotnet build ${{ env.solution }} --no-restore --configuration Release
 
     - name: Run Unit Tests
       run: dotnet test ${{ env.solution }}
 
     - name: Deploy to staging
-      run: dotnet build ${{ env.package }} --output ${{ env.output }}
+      run: dotnet publish ${{ env.package }} --output ${{ env.output }} -c Release --framework {{ matrix.dotnet-version }} --self-contained true
