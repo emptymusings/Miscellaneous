@@ -39,4 +39,4 @@ jobs:
       run: dotnet test ${{ env.solution }}
 
     - name: Deploy to staging
-      run: dotnet publish ${{ env.package }} -c Release -r win-x64 -p:PublishSingleFile=true -o build
+      run: dotnet publish ${{ env.package }} -c Release -r win-x64 -o build
