@@ -39,4 +39,4 @@ jobs:
       run: dotnet test ${{ env.solution }}
 
     - name: Deploy to staging
-      run: dotnet build ${{ env.solution }} --output './Packages/Staging/DataStructuresAndAlgorithms'
+      run: dotnet build ${{ env.package }} --output ${{ env.output }}
