@@ -18,7 +18,7 @@ jobs:
     env:
       solution: './DataStructuresAndAlgorithms/Algorithms/Algorithms.sln'
       package: './DataStructuresAndAlgorithms/Algorithms/Algorithms/Algorithms.csproj'
-      output: 'bin'
+      output: 'Packages/Staging/DataStructuresAndAlgorithms'
 
     steps:
     - name: Checkout
@@ -39,4 +39,4 @@ jobs:
       run: dotnet test ${{ env.solution }}
 
     - name: Deploy to staging
-      run: dotnet publish ${{ env.package }} -c Release -r win-x64 -o build
+      run: dotnet publish ${{ env.package }} -c Release -r win-x64 -o ${{ env.output }}
