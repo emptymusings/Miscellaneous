@@ -20,11 +20,14 @@ jobs:
     strategy:
       matrix:
         dotnet-version: [ '5.0.x' ]
+    defaults:
+      run:
+        shell: bash
 
     env:
       solution: './DataStructuresAndAlgorithms/Algorithms/Algorithms.sln'
       package: './DataStructuresAndAlgorithms/Algorithms/Algorithms/Algorithms.csproj'
-      output: 'Packages/Staging/DataStructuresAndAlgorithms/Algorithms'
+      output: 'Packages/Staging/DataStructuresAndAlgorithms'
 
     steps:
     - name: Checkout
@@ -49,10 +52,13 @@ jobs:
         dotnet publish ${{ env.package }} -c Release -o ${{ env.output }} |
         mkdir Publish
     
-    - name: Archive artifacs
-      uses: actions/upload-artifact@main
+    - name: Create artifacts
+      uses: actions/upload-artifact@v2
       with:
         path: ${{ env.output }}
         name: published-package
-        target: ./Publish/published-package
-      
+    
+    - name: Ship artifacts
+      run: |
+        mkdir ${{ env.output }}/Algorithms
+        mv ${{ env.output }}/* ${{ env.output }}/Algorithms
