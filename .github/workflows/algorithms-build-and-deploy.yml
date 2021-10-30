@@ -6,6 +6,12 @@ on:
       - main
     paths:
       - 'DataStructuresAndAlgorithms/Algorithms/**'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'DataStructuresAndAlgoriths/Algoriths/**'
+      
   workflow_dispatch:
 
 jobs:
