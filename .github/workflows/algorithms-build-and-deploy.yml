@@ -54,9 +54,3 @@ jobs:
       with:
         path: ${{ env.output }}
         name: published-package
-    
-    - name: Ship artifacts
-      uses: actions/copy-action@0.0.1
-      with:
-        source: ${{ env.output }}
-        target: ${{ env.output }}
