@@ -46,3 +46,9 @@ jobs:
 
     - name: Deploy to staging
       run: dotnet publish ${{ env.package }} -c Release
+    
+    - name: Archive artifacs
+      uses: actions/upload-artifact@v2
+      with:
+        path: ${{ env.output }}
+      
