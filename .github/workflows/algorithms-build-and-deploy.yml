@@ -46,12 +46,13 @@ jobs:
 
     - name: Deploy to staging
       run: |
-        dotnet publish ${{ env.package }} -c Release -o ${{ env.output }}
+        dotnet publish ${{ env.package }} -c Release -o ${{ env.output }} |
+        mkdir Publish
     
     - name: Archive artifacs
       uses: actions/upload-artifact@main
       with:
         path: ${{ env.output }}
         name: published-package
-        target: published-package
+        target: ./Publish/published-package
       
