@@ -45,7 +45,7 @@ jobs:
       run: dotnet test ${{ env.solution }}
 
     - name: Deploy to staging
-      run: dotnet publish ${{ env.package }} -c Release
+      run: dotnet publish ${{ env.package }} -c Release -o ${{ env.output }}
     
     - name: Archive artifacs
       uses: actions/upload-artifact@v2
