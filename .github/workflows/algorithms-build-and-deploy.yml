@@ -5,12 +5,12 @@ on:
     branches: 
       - main
     paths:
-      - 'DataStructuresAndAlgorithms/Algorithms/**'
+      - 'DataStructuresAndAlgorithms/**'
   pull_request:
     branches:
       - main
     paths:
-      - 'DataStructuresAndAlgoriths/Algoriths/**'
+      - 'DataStructuresAndAlgoriths/**'
       
   workflow_dispatch:
 
