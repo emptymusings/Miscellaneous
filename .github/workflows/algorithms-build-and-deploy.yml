@@ -27,7 +27,7 @@ jobs:
     env:
       solution: './DataStructuresAndAlgorithms/Algorithms/Algorithms.sln'
       package: './DataStructuresAndAlgorithms/Algorithms/Algorithms/Algorithms.csproj'
-      output: 'Packages/Staging/DataStructuresAndAlgorithms'
+      output: './Packages/Staging/DataStructuresAndAlgorithms'
 
     steps:
     - name: Checkout
