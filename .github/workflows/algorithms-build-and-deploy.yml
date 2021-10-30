@@ -45,10 +45,13 @@ jobs:
       run: dotnet test ${{ env.solution }}
 
     - name: Deploy to staging
-      run: dotnet publish ${{ env.package }} -c Release -o ${{ env.output }}
+      run: |
+        dotnet publish ${{ env.package }} -c Release -o ${{ env.output }}
     
     - name: Archive artifacs
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@main
       with:
         path: ${{ env.output }}
+        name: published-package
+        target: published-package
       
