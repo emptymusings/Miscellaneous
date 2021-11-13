@@ -5,6 +5,7 @@ import {
   Routes,
   NavLink
 } from "react-router-dom";
+import Home from "./home/Home";
 
 export default function App() {
   return (
@@ -16,7 +17,7 @@ export default function App() {
           </NavLink>
         </nav>
         <Routes>
-          <Route path="" element={<HomePage />} />         
+          <Route path="" element={<Home />} />         
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
@@ -24,5 +25,4 @@ export default function App() {
   );
 }
 
-const HomePage = () => <h1>Home page</h1>;
 const NotFoundPage = () => <h1>404</h1>;
