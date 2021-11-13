@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Exercises\leetcode\Medium\" />
     <Folder Include="Exercises\leetcode\Hard\" />
   </ItemGroup>
 
