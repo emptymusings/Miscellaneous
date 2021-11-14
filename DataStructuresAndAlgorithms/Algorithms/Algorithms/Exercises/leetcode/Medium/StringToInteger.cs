@@ -14,8 +14,6 @@ namespace Algorithms.Exercises.leetcode.Medium
             bool isNegative = false;
             int result = 0;
 
-            var test = 4 % 5;
-
             for (int i = 0; i < s.Length; i++)
             {
                 if (s[i] == ' ' && !inDigits)
