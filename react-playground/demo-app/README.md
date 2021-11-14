@@ -23,7 +23,7 @@ cd ./{path-to-your-project-directory} && npx lint-staged
 ```
 
 ### Main Project in Base Directory
-If you're project is in the same base directory as your `.git` directory, you can probably just remove the `pre-commit` script and simply follow the [prettier instructions here](https://prettier.io/docs/en/install.html#git-hooks).
+If you're project is in the same base directory as your `.git` directory, you may be able to just remove the `pre-commit` script and simply follow the [prettier instructions here](https://prettier.io/docs/en/install.html#git-hooks).
 
 ## Resources
 - [MUI 5](https://mui.com/)
