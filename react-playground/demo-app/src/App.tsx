@@ -6,6 +6,7 @@ import "./styles/app-styles.css";
 const theme = createTheme({});
 
 export default function App() {
+  // made a comment to test
   return (
     <div>
       <ThemeProvider theme={theme}>
