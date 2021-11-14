@@ -6,21 +6,31 @@ import {
   NavLink
 } from "react-router-dom";
 import Home from "./home/Home";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Header from "./components/header/header";
+
+const theme = createTheme({
+  
+});
 
 export default function App() {
   return (
     <div>
-      <BrowserRouter>
-        <nav>
-          <NavLink to="/">
-            Home
-          </NavLink>
-        </nav>
-        <Routes>
-          <Route path="" element={<Home />} />         
-          <Route path="/*" element={<NotFoundPage />} />
-        </Routes>
-      </BrowserRouter>
+      <Header />
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <nav>
+            <NavLink to="/">
+              Home
+            </NavLink>
+          </nav>
+          <Routes>
+            
+            <Route path="" element={<Home />} />         
+            <Route path="/*" element={<NotFoundPage />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
     </div>
   );
 }
