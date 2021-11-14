@@ -8,6 +8,7 @@ import {
 import Home from "./home/Home";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Header from "./components/header/header";
+import "./styles.css";
 
 const theme = createTheme({
   
@@ -20,7 +21,7 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <nav>
-            <NavLink to="/">
+            <NavLink className="app-heading" to="/">
               Home
             </NavLink>
           </nav>
