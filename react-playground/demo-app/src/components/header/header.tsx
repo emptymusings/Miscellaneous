@@ -7,7 +7,6 @@ import {
     NavLink
   } from "react-router-dom";
 import Home from '../../home/Home';
-import Paper from '@mui/material/Paper';
 
 const NotFoundPage = () => <h1>404</h1>;
 
@@ -21,12 +20,10 @@ export default function Header(): JSX.Element {
                         </NavLink>
                     </nav>                
             </div>
-            <Paper className="app-content">
-                <Routes>                        
-                    <Route path="" element={<Home />} />         
-                    <Route path="/*" element={<NotFoundPage />} />
-                </Routes>
-            </Paper>
+            <Routes>                        
+                <Route path="" element={<Home />} />         
+                <Route path="/*" element={<NotFoundPage />} />
+            </Routes>
         </BrowserRouter>
     );
 }
