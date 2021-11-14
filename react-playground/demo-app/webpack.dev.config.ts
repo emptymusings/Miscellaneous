@@ -1,8 +1,8 @@
 import path from "path";
 import { Configuration, HotModuleReplacementPlugin } from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
-import ESLintPlugin from 'eslint-webpack-plugin';
+import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
+import ESLintPlugin from "eslint-webpack-plugin";
 
 const config: Configuration = {
   mode: "development",
@@ -41,11 +41,11 @@ const config: Configuration = {
     }),
     new HotModuleReplacementPlugin(),
     new ForkTsCheckerWebpackPlugin({
-      async: false
+      async: false,
     }),
     new ESLintPlugin({
       extensions: ["js", "jsx", "ts", "tsx"],
-    })
+    }),
   ],
   devtool: "inline-source-map",
   devServer: {
@@ -53,7 +53,7 @@ const config: Configuration = {
     historyApiFallback: true,
     port: 3000,
     open: true,
-    hot: true
+    hot: true,
   },
 };
 
