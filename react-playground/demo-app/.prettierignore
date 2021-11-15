@@ -1,3 +1,7 @@
 # Ignore artifacts
 build
 public
+
+# Ignore certain types of files
+*.json
+*.css

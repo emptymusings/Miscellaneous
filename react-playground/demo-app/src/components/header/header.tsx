@@ -1,8 +1,8 @@
-import React from "react";
-import { BrowserRouter, Route, Routes, NavLink } from "react-router-dom";
-import Home from "../../home/Home";
+import React from 'react';
+import { BrowserRouter, Route, Routes, NavLink } from 'react-router-dom';
+import Home from '../../home/Home';
 
-const NotFoundPage = () => <h1>404</h1>;
+const NotFoundPage = (): JSX.Element => <h1>404</h1>;
 
 export default function Header(): JSX.Element {
   return (
