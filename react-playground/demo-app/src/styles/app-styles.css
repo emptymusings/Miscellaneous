@@ -3,10 +3,16 @@
   background-color: rgb(117, 141, 206);
   height: 3em;
   border-radius: 8px;
-  box-shadow: 4px 4px grey;
-  line-height: 40px;
+  box-shadow: 4px 4px grey;    
+  align-items: center;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.orientation-horizontal {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .app-background {
@@ -14,15 +20,16 @@
 }
 
 .app-content {
-  margin-top: 20px;
+  margin-top: 50px;
   margin-left: 20px;
   margin-right: 20px;
   min-height: 300px;
-  padding: 10px;
+  padding-top: 10px;
 }
 
 .component-paper {
-  margin: 10px;
+  background-color: #d5d5e7 !important;
+  margin: 20px;
   padding: 15px;
   min-height: 300px;
 }
