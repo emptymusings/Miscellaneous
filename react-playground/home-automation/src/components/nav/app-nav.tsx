@@ -3,12 +3,12 @@ import { BrowserRouter, Route, Routes, NavLink } from 'react-router-dom';
 import Home from '../../home/Home';
 import { HomeRounded } from '@mui/icons-material';
 import { AccountBalance } from '@mui/icons-material';
-import TestPage from '../../test/test';
 import Toolbar from '@mui/material/Toolbar';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
+
 import IconButton from '@mui/material/IconButton';
+import CrestronDeviceList from '../../crestron/crestron-device-list';
 
 const NotFoundPage = (): JSX.Element => <h1>404</h1>;
 
@@ -27,10 +27,10 @@ export default function NavMain(): JSX.Element {
               </NavLink>
             </nav>
             <nav>
-              <NavLink to="/test" style={{ textDecoration: 'none' }}>
+              <NavLink to="/crestron" style={{ textDecoration: 'none' }}>
                 <IconButton>
                   <AccountBalance />
-                  Test
+                  Crestron Devices
                 </IconButton>
               </NavLink>
             </nav>
@@ -38,13 +38,11 @@ export default function NavMain(): JSX.Element {
         </AppBar>
       </Box>
       <div className="app-content">
-        <Paper className="component-paper">
-          <Routes>
-            <Route path="" element={<Home />} />
-            <Route path="/test" element={<TestPage />} />
-            <Route path="/*" element={<NotFoundPage />} />
-          </Routes>
-        </Paper>
+        <Routes>
+          <Route path="" element={<Home />} />
+          <Route path="/crestron" element={<CrestronDeviceList />} />
+          <Route path="/*" element={<NotFoundPage />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );

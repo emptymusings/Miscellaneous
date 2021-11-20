@@ -9,7 +9,9 @@ export default function App(): JSX.Element {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Header />
+        <div className="main-content">
+          <Header />
+        </div>
       </ThemeProvider>
     </div>
   );
