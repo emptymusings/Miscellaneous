@@ -39,6 +39,7 @@
 
 .tiled-paper {
   flex-grow: 1 !important;
+  background-color: rgb(117, 141, 206) !important;
   padding: 3px;
   margin: 5px;
 }
