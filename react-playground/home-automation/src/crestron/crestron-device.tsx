@@ -5,7 +5,7 @@ import Paper from '@mui/material/Paper';
 import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
 import DeviceThermostatOutlinedIcon from '@mui/icons-material/DeviceThermostatOutlined';
-import DeviceButtons from './components/device-buttons';
+import LightButtons from './components/light-buttons';
 
 export interface Props {
   device: Device;
@@ -31,7 +31,7 @@ export default function CrestronDevice(props: Props): JSX.Element {
           {props.device.deviceGroup}
         </Typography>
         <Paper>
-          <DeviceButtons device={props.device} />
+          <LightButtons device={props.device} />
         </Paper>
       </Paper>
     </>
