@@ -5,8 +5,7 @@ import Paper from '@mui/material/Paper';
 import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
 import DeviceThermostatOutlinedIcon from '@mui/icons-material/DeviceThermostatOutlined';
-import LightButtons from './components/light-buttons';
-
+import DimmerButtons from './components/dimmer-buttons';
 export interface Props {
   device: Device;
 }
@@ -23,6 +22,13 @@ export default function CrestronDevice(props: Props): JSX.Element {
     }
   };
 
+  function GetDeviceDisplay({ device }: Props): JSX.Element {
+    if (device.deviceGroup === 'Dimmer') {
+      return <DimmerButtons device={device} />;
+    }
+
+    return <></>;
+  }
   return (
     <>
       <Paper className="tiled-paper" elevation={3}>
@@ -31,7 +37,7 @@ export default function CrestronDevice(props: Props): JSX.Element {
           {props.device.deviceGroup}
         </Typography>
         <Paper>
-          <LightButtons device={props.device} />
+          <GetDeviceDisplay device={props.device} />
         </Paper>
       </Paper>
     </>

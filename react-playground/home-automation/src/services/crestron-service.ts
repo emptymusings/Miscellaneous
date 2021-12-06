@@ -68,7 +68,7 @@ export function sendCommand(
   deviceName: string,
   command: string,
   msToWaitForResponse = 100
-): Promise<Device | undefined> {
+): Promise<DeviceDetails | undefined> {
   return fetch(
     `${crestronUrl}/Processor/Device/Command?deviceName=${deviceName}&command=${command}&msToWaitForResponse=${msToWaitForResponse}`,
     { method: 'POST' }
@@ -78,7 +78,7 @@ export function sendCommand(
         const data = response.json();
 
         if (data) {
-          return data as unknown as Device;
+          return data as unknown as DeviceDetails;
         } else {
           return Promise.reject(Error);
         }
